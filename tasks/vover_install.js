@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
         var params = [];
 
-        params.push("--config.cwd=`" + params.cwd + "`");
+        params.push("--config.cwd=`" + options.cwd + "`");
 
         if(options.color){
             params.push("--config.color=true");
@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 
         var done = this.async();
 
-        vover.init({ cwd: process.cwd() });
+        vover.init({ cwd: options.cwd });
         vover
             .command("install", params)
             .then(done);
