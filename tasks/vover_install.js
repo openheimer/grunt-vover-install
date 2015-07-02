@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         var options = this.options({
             /*  bower configuration options (renderer specific)  */
             color:        true,               /*  bower --config.color=true        */
-            cwd:          process.cwd(),      /*  bower --config.cwd=`pwd`         */
+            cwd:          process.cwd(),      /*  bower --config.cwd=<dir>         */
 
             /*  bower install command options  */
             production:   false,              /*  bower install --production       */
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 
         var params = [];
 
-        params.push("--config.cwd=`" + options.cwd + "`");
+        params.push("--config.cwd=" + options.cwd);
 
         if(options.color){
             params.push("--config.color=true");
