@@ -55,6 +55,11 @@ module.exports = function(grunt) {
             params.push("--config.directory=" + options.directory);
         }
 
-        vover.command("install", params);
+        var done = this.async();
+
+        vover.init({ cwd: process.cwd() });
+        vover
+            .command("install", params)
+            .then(done);
     });
 };
