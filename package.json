@@ -1,7 +1,7 @@
 {
   "name": "grunt-vover-install",
   "description": "Grunt-plugin for using vover",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "homepage": "https://github.com/openheimer/grunt-vover-install",
   "author": {
     "name": "Korniev Zakhar",

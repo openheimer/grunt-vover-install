@@ -60,6 +60,7 @@ module.exports = function(grunt) {
         vover.init({ cwd: options.cwd });
         vover
             .command("install", params)
+            .fail(function(){ done(false); })
             .finally(done);
     });
 };
